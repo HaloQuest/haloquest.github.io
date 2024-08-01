@@ -98,7 +98,7 @@ function sortTable(n,initialSort = false) {
             switching = true;
       }
   }
-  table.querySelector(`th:nth-child(${n + 1})`).classList.add(dir === "asc" ? "sorted-asc" : "sorted-desc");
+  document.getElementById("secondHead").querySelector(`th:nth-child(${n + 1})`).classList.add(dir === "asc" ? "sorted-asc" : "sorted-desc");
 
 }
 
