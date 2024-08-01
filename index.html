@@ -191,34 +191,54 @@
     </div>
   </div>
 </section>
-<section class="data_collection">
+
+
+<section class="section">
   <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset Description</h2>
+      </div>
+    </div>
+    <!-- Summary -->
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">Summary</h2>
+      <p>
+        HaloQuest is a novel visual question answering (VQA) dataset that focuses on multimodal hallucination in vision-language models (VLMs). It contains over 7,748 examples with a combination of real and synthetically generated images, annotated with questions and answers designed to trigger and evaluate hallucinations.
+      </p>
+      
+      <!-- Supported Tasks -->
+      <h2 class="subtitle has-text-centered">Supported Tasks</h2>
+      <p>
+        HaloQuest supports tasks related to hallucination detection and reduction in VLMs, providing a challenging benchmark for Visual Question Answering. The dataset is useful for both evaluation and fine-tuning purposes, aiming to advance multimodal reasoning.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Dataset Details</h2>
+      </div>
+    </div>
+    <!-- Data Collection -->
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">Data Collection</h2>
       <p>
         HaloQuest includes a mix of real images from the Open Images dataset and synthetic images generated using Midjourney and Stable Diffusion. Images were curated based on interest and comprehensibility. Questions and answers were crafted by humans and large language models (LLMs), focusing on false premises, visually challenging questions, and questions with insufficient context.
       </p>
       <image  src="static/images/data-collection-pipeline.png"/>
-    </div>
-  </div>
-</section>
-
-<section class="data_example">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
+      
+      <!-- Data Instances -->
       <h2 class="subtitle has-text-centered">Data Instances</h2>
       <p>
         Example entries from HaloQuest include complex questions requiring nuanced reasoning and detailed answers. Below are some samples:
       </p>
       <image  src="static/images/example-image.png"/>
-    </div>
-  </div>
-</section>
 
-
-<section class="data_splits">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
+      <!-- Data Splits -->
       <h2 class="subtitle has-text-centered">Data Splits</h2>
       <p>The dataset is split into training and evaluation sets. The following table provides detailed statistics for each subset.</p>
       <table tabindex="0">
@@ -230,31 +250,47 @@
         </tr>
         </tbody>
         </table>
+
     </div>
   </div>
 </section>
 
-<!-- 
 <section>
   <div class="container"><div class="columns is-centered"><div class="column is-full has-text-centered content">
     <table id="leaderboard">
       <thead>
           <tr>
-              <th onclick="sortTable(0)">Mean Rank</th>
-              <th onclick="sortTable(1)">Method</th>
-              <th onclick="sortTable(2)">MCOT</th>
-              <th onclick="sortTable(3)">Multi-image VQA</th>
-              <th onclick="sortTable(4)">Text R@1</th>
-              <th onclick="sortTable(5)">Image R@1</th>
-              <th onclick="sortTable(6)">Captioning</th>
-              <th onclick="sortTable(7)">VQA + Hall. Trig.</th>
+              <th rowspan="2" onclick="sortTable(0)">Model (# Param)</th>
+              <th colspan="2">Overall</th>
+              <th colspan="2">Generated</th>
+              <th colspan="2">Real</th>
+              <th colspan="2">False Premise</th>
+              <th colspan="2">Visually Challenging</th>
+              <th colspan="2">Insufficient Context</th>
+          </tr>
+          <tr>
+              <th onclick="sortTable(1)">Human Eval</th>
+              <th onclick="sortTable(2)">Auto-Eval</th>
+              
+              
+              <th onclick="sortTable(3)">Human Eval</th>
+              <th onclick="sortTable(4)">Auto-Eval</th>
+              <th onclick="sortTable(5)">Human Eval</th>
+              <th onclick="sortTable(6)">Auto-Eval</th>
+
+              <th onclick="sortTable(7)">Human Eval</th>
+              <th onclick="sortTable(8)">Auto-Eval</th>
+              <th onclick="sortTable(9)">Human Eval</th>
+              <th onclick="sortTable(10)">Auto-Eval</th>
+              <th onclick="sortTable(11)">Human Eval</th>
+              <th onclick="sortTable(12)">Auto-Eval</th>
           </tr>
       </thead>
       <tbody>
       </tbody>
     </table>
   </div></div></div>
-</section> -->
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
