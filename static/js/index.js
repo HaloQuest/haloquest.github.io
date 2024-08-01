@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(data => {
           populateTable(data);
-          sortTable(0,true); 
+          sortTable(1,true); 
       })
       .catch(error => console.error('Error loading data:', error));
 });
@@ -68,7 +68,7 @@ function sortTable(n,initialSort = false) {
       switching = false;
       rows = table.rows;
       
-      for (i = 1; i < (rows.length - 1); i++) {
+      for (i = 2; i < (rows.length - 1); i++) {
           shouldSwitch = false;
           x = rows[i].getElementsByTagName("TD")[n];
           y = rows[i + 1].getElementsByTagName("TD")[n];
