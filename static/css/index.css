@@ -155,3 +155,43 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+table {
+  border-collapse: collapse;
+  table-layout: auto;
+  border: 1px solid #ddd;
+}
+
+th {
+  padding: 2px 5px;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 2px 5px;
+  border: 1px solid #ddd;
+}
+
+thead {
+  background: #ddd;
+}
+
+th:hover {
+  background-color: #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+th.sorted-asc::after {
+  content: " ▲";
+}
+
+th.sorted-desc::after {
+  content: " ▼";
+}
