@@ -163,7 +163,7 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <image  src="static/images/teaser.png"/>
@@ -173,7 +173,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -260,7 +260,7 @@
     <table id="leaderboard">
       <thead>
           <tr>
-              <th rowspan="2" onclick="sortTable(0)">Model (# Param)</th>
+              <th colspan="2"></th>
               <th colspan="2">Overall</th>
               <th colspan="2">Generated</th>
               <th colspan="2">Real</th>
@@ -268,24 +268,28 @@
               <th colspan="2">Visually Challenging</th>
               <th colspan="2">Insufficient Context</th>
           </tr>
-          <tr>
-              <th onclick="sortTable(1)">Human Eval</th>
-              <th onclick="sortTable(2)">Auto-Eval</th>
-              
-              
-              <th onclick="sortTable(3)">Human Eval</th>
-              <th onclick="sortTable(4)">Auto-Eval</th>
-              <th onclick="sortTable(5)">Human Eval</th>
-              <th onclick="sortTable(6)">Auto-Eval</th>
-
-              <th onclick="sortTable(7)">Human Eval</th>
-              <th onclick="sortTable(8)">Auto-Eval</th>
-              <th onclick="sortTable(9)">Human Eval</th>
-              <th onclick="sortTable(10)">Auto-Eval</th>
-              <th onclick="sortTable(11)">Human Eval</th>
-              <th onclick="sortTable(12)">Auto-Eval</th>
-          </tr>
       </thead>
+      <thead id="secondHead">
+          <tr>
+              <th onclick="sortTable(0)" json_label="model">Model (#Param)</th>
+              <th onclick="sortTable(1)" json_label="rank">Rank</th>
+
+              <th onclick="sortTable(2)" json_label="overall_human">Human Eval</th>
+              <th onclick="sortTable(3)" json_label="overall_auto">Auto-Eval</th>
+              
+              <th onclick="sortTable(4)" json_label="generated_human">Human Eval</th>
+              <th onclick="sortTable(5)" json_label="generated_auto">Auto-Eval</th>
+              <th onclick="sortTable(6)" json_label="real_human">Human Eval</th>
+              <th onclick="sortTable(7)" json_label="real_auto">Auto-Eval</th>
+
+              <th onclick="sortTable(8)" json_label="prem_human">Human Eval</th>
+              <th onclick="sortTable(9)" json_label="prem_auto">Auto-Eval</th>
+              <th onclick="sortTable(10)" json_label="vis_human">Human Eval</th>
+              <th onclick="sortTable(11)" json_label="vis_auto">Auto-Eval</th>
+              <th onclick="sortTable(12)" json_label="insuf_human">Human Eval</th>
+              <th onclick="sortTable(13)" json_label="insuf_auto">Auto-Eval</th>
+          </tr>
+        </thead>
       <tbody>
       </tbody>
     </table>

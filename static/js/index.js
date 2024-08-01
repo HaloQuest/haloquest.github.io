@@ -30,7 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function populateTable(data) {
   let tableBody = document.querySelector('#leaderboard tbody');
-  let entries = document.querySelector('#leaderboard thead').innerText.split("\t")
+  var entries = [];
+  var secondThead = document.getElementById("secondHead");
+  
+  var elements = secondThead.querySelectorAll("*");
+  
+  // Loop through each element and get its data-label
+  elements.forEach(function(element) {
+    var label = element.getAttribute("json_label");
+    if (label) {
+      entries.push(label);
+    }
+  });
   tableBody.innerHTML = '';  // Clear existing content
   data.forEach(item => {
       let row = document.createElement('tr');
