@@ -246,15 +246,17 @@
       <!-- Data Splits -->
       <h2 class="subtitle has-text-centered">Data Splits</h2>
       <p>The dataset is split into training and evaluation sets. The following table provides detailed statistics for each subset.</p>
+      <div class="columns is-centered"><div class="column is-full has-text-centered content">
       <table tabindex="0">
         <thead><tr>
-        <th></th><th align="center">Real Images</th><th align="center">Synthetic Images</th><th align="center">False Premise Questions</th><th align="center">Visually Challenging Questions</th><th align="center">Insufficient Context Questions</th><th align="center">Total Entries</th></tr></thead>
-        <tbody><tr><td>Train Set</td><td align="center">2985</td><td align="center">4155</td><td align="center">2698</td><td align="center">2973</td><td align="center">1469</td><td align="center">7140</td></tr><tr>
-        <td>Eval Set</td><td align="center">217</td><td align="center">391</td><td align="center">304</td><td align="center">183</td><td align="center">121</td><td align="center">608</td></tr>
-        <tr><td>Total</td><td align="center">3202</td><td align="center">4546</td><td align="center">3002</td><td align="center">3156</td><td align="center">1590</td><td align="center">7748</td>
+        <th></th><th>Real Images</th><th>Synthetic Images</th><th>False Premise Questions</th><th>Visually Challenging Questions</th><th>Insufficient Context Questions</th><th>Total Entries</th></tr></thead>
+        <tbody><tr><td>Train Set</td><td>2985</td><td>4155</td><td>2698</td><td>2973</td><td>1469</td><td>7140</td></tr><tr>
+        <td>Eval Set</td><td>217</td><td>391</td><td>304</td><td>183</td><td>121</td><td>608</td></tr>
+        <tr><td>Total</td><td>3202</td><td>4546</td><td>3002</td><td>3156</td><td>1590</td><td>7748</td>
         </tr>
         </tbody>
         </table>
+      </div></div>
 
     </div>
   </div>
@@ -264,6 +266,12 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <h2 class="title is-3">HaloQuest Leaderboard</h2>
+    </div>
+    
+    <div class="columns is-centered has-text-centered">
+      <p>
+        (Gemini 1.0 Pro was used for Auto-Eval)
+      </p>
     </div>
   </div>
 </section>
@@ -279,7 +287,6 @@
               <th colspan="2">False Premise</th>
               <th colspan="2">Visually Challenging</th>
               <th colspan="2">Insufficient Context</th>
-              <th></th>
           </tr>
       </thead>
       <thead id="secondHead">
@@ -301,7 +308,6 @@
               <th onclick="sortTable(11)" json_label="vis_auto">Auto-Eval</th>
               <th onclick="sortTable(12)" json_label="insuf_human">Human Eval</th>
               <th onclick="sortTable(13)" json_label="insuf_auto">Auto-Eval</th>
-              <th onclick="sortTable(14)" json_label="date">Date</th>
           </tr>
         </thead>
       <tbody>

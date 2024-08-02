@@ -12,24 +12,6 @@ function preloadInterpolationImages() {
   }
 }
 
-function convertToFloat(input) {
-  if (!isNaN(input)) {
-    return parseFloat(input);
-  }
-  if (typeof input === 'number') {return input;}
-  if (typeof input === 'string') {
-      const months = {'Jan': 1,'Feb': 2,'Mar': 3,'Apr': 4,'May': 5,'Jun': 6,'Jul': 7,'Aug': 8,'Sep': 9,'Oct': 10,'Nov': 11,'Dec': 12};
-      const [month, year] = input.split(' ');
-      const monthNumber = months[month];
-      const yearNumber = parseInt(year, 10);
-      // Convert the date to a float in the format YYYY.MM
-      const floatValue = yearNumber + monthNumber / 100;
-
-      return floatValue;
-  }
-  throw new Error('Invalid input type. Expected a float or a date string.');
-}
-
 function setInterpolationImage(i) {
   var image = interp_images[i];
   image.ondragstart = function() { return false; };
@@ -63,12 +45,22 @@ function populateTable(data) {
   tableBody.innerHTML = '';  // Clear existing content
   data.forEach(item => {
       let row = document.createElement('tr');
-
+      
       entries.forEach(entry => {
-          let cell = document.createElement('td');
-          cell.textContent = item[entry];
-          row.appendChild(cell);
-      });
+        let cell = document.createElement('td');
+        
+        if (entry !== 'model') {
+            cell.textContent = item[entry];
+        } else {
+            cell.textContent = item[entry];
+            let br = document.createElement('br');
+            cell.appendChild(br);
+            cell.appendChild(document.createTextNode(item['date']));
+        }
+        
+        row.appendChild(cell);
+    });
+    
 
       tableBody.appendChild(row);
   });
@@ -90,8 +82,8 @@ function sortTable(n,initialSort = false) {
           shouldSwitch = false;
           x = rows[i].getElementsByTagName("TD")[n];
           y = rows[i + 1].getElementsByTagName("TD")[n];
-          let xContent = convertToFloat(x.textContent.trim());
-          let yContent = convertToFloat(y.textContent.trim());
+          let xContent = x.textContent.trim();
+          let yContent = y.textContent.trim();
           if (!isNaN(xContent) && !isNaN(yContent)) {
             xContent = parseFloat(xContent);
             yContent = parseFloat(yContent);
