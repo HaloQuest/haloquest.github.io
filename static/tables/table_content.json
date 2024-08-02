@@ -13,7 +13,8 @@
       "vis_auto": 31.2,
       "insuf_human": 2.5,
       "insuf_auto": 3.3,
-      "rank": 11
+      "rank": 11,
+      "date": "Mar 2024"
    },
    {
       "model": "MiniGPT4 (13B)",
@@ -29,7 +30,8 @@
       "vis_auto": 13.7,
       "insuf_human": 36.4,
       "insuf_auto": 51.2,
-      "rank": 8
+      "rank": 8,
+      "date": "Mar 2024"
    },
    {
       "model": "BLIP2 (12B)",
@@ -45,7 +47,8 @@
       "vis_auto": 32.8,
       "insuf_human": 9.9,
       "insuf_auto": 14.9,
-      "rank": 7
+      "rank": 7,
+      "date": "Mar 2024"
    },
    {
       "model": "InstructBLIP (12B)",
@@ -61,7 +64,8 @@
       "vis_auto": 33.9,
       "insuf_human": 6.6,
       "insuf_auto": 11.6,
-      "rank": 5
+      "rank": 5,
+      "date": "Mar 2024"
    },
    {
       "model": "Open-flamingo (9B)",
@@ -77,7 +81,8 @@
       "vis_auto": 21.3,
       "insuf_human": 7.4,
       "insuf_auto": 8.3,
-      "rank": 10
+      "rank": 10,
+      "date": "Mar 2024"
    },
    {
       "model": "BLIP2 (8B)",
@@ -93,7 +98,8 @@
       "vis_auto": 26.8,
       "insuf_human": 1.7,
       "insuf_auto": 6.6,
-      "rank": 12
+      "rank": 12,
+      "date": "Mar 2024"
    },
    {
       "model": "InstructBLIP (8B)",
@@ -109,7 +115,8 @@
       "vis_auto": 11.6,
       "insuf_human": 33.3,
       "insuf_auto": 33.9,
-      "rank": 6
+      "rank": 6,
+      "date": "Mar 2024"
    },
    {
       "model": "MiniGPT4 (7B)",
@@ -125,7 +132,8 @@
       "vis_auto": 27.3,
       "insuf_human": 15.7,
       "insuf_auto": 16.5,
-      "rank": 9
+      "rank": 9,
+      "date": "Mar 2024"
    },
    {
       "model": "mPLUG-Owl2 (7B)",
@@ -141,7 +149,8 @@
       "vis_auto": 27.9,
       "insuf_human": 0.8,
       "insuf_auto": 3.3,
-      "rank": 14
+      "rank": 14,
+      "date": "Mar 2024"
    },
    {
       "model": "mPLUG-Owl1 (7B)",
@@ -157,7 +166,8 @@
       "vis_auto": 26.8,
       "insuf_human": 2.5,
       "insuf_auto": 2.5,
-      "rank": 13
+      "rank": 13,
+      "date": "Mar 2024"
    },
    {
       "model": "Open-flamingo (3B)",
@@ -173,7 +183,8 @@
       "vis_auto": 21.3,
       "insuf_human": 4.1,
       "insuf_auto": 5.8,
-      "rank": 16
+      "rank": 16,
+      "date": "Mar 2024"
    },
    {
       "model": "OFA (1B)",
@@ -189,7 +200,8 @@
       "vis_auto": 20.2,
       "insuf_human": 1.7,
       "insuf_auto": 5.0,
-      "rank": 15
+      "rank": 15,
+      "date": "Mar 2024"
    },
    {
       "model": "BEiT-3 (0.7B)",
@@ -205,7 +217,8 @@
       "vis_auto": 36.1,
       "insuf_human": 9.1,
       "insuf_auto": 10.7,
-      "rank": 4
+      "rank": 4,
+      "date": "Mar 2024"
    },
    {
       "model": "GPT-4",
@@ -221,7 +234,8 @@
       "vis_auto": 44.8,
       "insuf_human": 80.6,
       "insuf_auto": 79.1,
-      "rank": 3
+      "rank": 3,
+      "date": "Mar 2024"
    },
    {
       "model": "GPT-4o",
@@ -237,7 +251,8 @@
       "vis_auto": 55.2,
       "insuf_human": 80.6,
       "insuf_auto": 68.7,
-      "rank": 2
+      "rank": 2,
+      "date": "Mar 2024"
    },
    {
       "model": "Gemini 1.5 Pro",
@@ -253,6 +268,7 @@
       "vis_auto": 56.3,
       "insuf_human": 91.0,
       "insuf_auto": 92.5,
-      "rank": 1
+      "rank": 1,
+      "date": "Jun 2024"
    }
 ]
