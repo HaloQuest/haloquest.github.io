@@ -235,7 +235,7 @@
       "insuf_human": 80.6,
       "insuf_auto": 79.1,
       "rank": 3,
-      "date": "Mar 2024"
+      "date": "May 2024"
    },
    {
       "model": "GPT-4o",
@@ -252,7 +252,7 @@
       "insuf_human": 80.6,
       "insuf_auto": 68.7,
       "rank": 2,
-      "date": "Mar 2024"
+      "date": "May 2024"
    },
    {
       "model": "Gemini 1.5 Pro",
@@ -269,6 +269,6 @@
       "insuf_human": 91.0,
       "insuf_auto": 92.5,
       "rank": 1,
-      "date": "Jun 2024"
+      "date": "May 2024"
    }
 ]
