@@ -11,6 +11,87 @@ function preloadInterpolationImages() {
     interp_images[i].src = path;
   }
 }
+function createDatapointImage(url){
+  let img = document.createElement('img');
+  img.src = url;
+  img.classList.add('datapointImg');
+  return img;
+}
+
+function refreshData(){
+  let navbar = document.getElementById('browser-navbar');
+  let currentTask = "HaloQuest";
+  currentTask = currentTask.replace(/(\r\n|\n|\r)/gm, "");
+  displayDatapoints(currentTask);
+  return false;
+}
+function createScroller(itemdiv,direction, height=null){
+  let scroll_container = document.createElement('div');
+  itemdiv.appendChild(scroll_container);
+  scroll_container.classList.add("scroll-container-"+direction);
+  if (height){
+    scroll_container.style.height=height;
+  }
+  let scroll_content = document.createElement('div');
+  scroll_container.appendChild(scroll_content);
+  scroll_content.classList.add("scroll-content-"+direction);
+  return scroll_content;
+}
+
+function displayHaloQuest(itemdiv, data){
+  let scroll_content_image = createScroller(itemdiv,'v');
+  scroll_content_image.appendChild(createDatapointImage(data['url']));
+  
+  let scroll_content_text = createScroller(itemdiv,'v',height='200px');
+  let p = document.createElement('p');
+  p.innerHTML = '<b>Question</b><br>'+data['question']+'<br><b>Answer</b><br>'+data['answer'][0];
+  scroll_content_text.appendChild(p);
+}
+
+function displayDatapoints(task) {
+  // Step 1: Load the JSON file
+  let navbar = document.getElementById('browser-navbar');
+  let displayData = displayHaloQuest;
+  fetch(`./static/data/${task}.json`)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error(`Failed to load ${task}.json`);
+          }
+          return response.json();
+      })
+      .then(data => {
+          // Step 2: Randomly sample 8 items
+          let items = data;
+          if (!Array.isArray(items) || items.length < 8) {
+              throw new Error('Not enough items in the JSON list!');
+          }
+
+          // Shuffle and pick 8 random items
+          items = items.sort(() => 0.5 - Math.random()).slice(0, 8);
+
+          // Step 3: Locate the div with id="results-carousel"
+          const carousel = document.getElementById('results-carousel');
+          if (!carousel) {
+              throw new Error('Could not find the div with id="results-carousel"');
+          }
+
+          // Replace the contents of divs with class="item item-<i>"
+          items.forEach((item, index) => {
+              const itemDivs = carousel.querySelectorAll(`.item.item-${index}`);
+              if (itemDivs) {
+                itemDivs.forEach((itemDiv,_) =>{
+                  itemDiv.innerHTML='';
+                  displayData(itemDiv,item);});
+              } else {
+                  console.warn(`Could not find the div with class "item item-${index}"`);
+              }
+          });
+      })
+      .catch(error => {
+          console.error('Error:', error);
+      });
+      setImageHeights();
+}
 
 function setInterpolationImage(i) {
   var image = interp_images[i];
@@ -150,6 +231,7 @@ $(document).ready(function() {
     		console.log(state);
     	});
     }
+    displayDatapoints("HaloQuest");
     /*var player = document.getElementById('interpolation-video');
     player.addEventListener('loadedmetadata', function() {
       $('#interpolation-slider').on('input', function(event) {
